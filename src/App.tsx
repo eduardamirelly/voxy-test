@@ -1,8 +1,11 @@
+import { SearchBox } from "./components/SearchBox"
+import { Container } from "./templates/Container/styles"
+
 function App() {
   return (
-    <div>
-      Hello World!
-    </div>
+    <Container>
+      <SearchBox />
+    </Container>
   )
 }
 
