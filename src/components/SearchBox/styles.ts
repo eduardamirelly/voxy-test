@@ -1,7 +1,8 @@
 import { styled, theme } from "../../styles/stitches.config";
 
 export const SearchContainer = styled('div', {
-  width: '710px',
+  maxWidth: '710px',
+  width: '100%',
   height: '58px',
   backgroundColor: '$white',
   boxShadow: `0px 4px 4px ${theme.colors.brownDark600}`,
@@ -13,6 +14,8 @@ export const SearchContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  marginTop: '2rem',
 });
 
 export const SearchInput = styled('input', {

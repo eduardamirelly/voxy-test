@@ -30,5 +30,4 @@ export const {
       primary: 'Poppins, sans-serif',
     },
   },
-
 });

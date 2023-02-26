@@ -6,6 +6,7 @@ export const Container = styled('div', {
 
   backgroundColor: '$white',
 
-  padding: '1rem 1.5rem',
+  padding: '2rem 1.5rem',
+  margin: '0 auto',
   fontFamily: '$primary',
 })

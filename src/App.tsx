@@ -1,11 +1,8 @@
-import { SearchBox } from "./components/SearchBox"
-import { Container } from "./templates/Container/styles"
+import { Home } from "./pages/Home"
 
 function App() {
   return (
-    <Container>
-      <SearchBox />
-    </Container>
+    <Home />
   )
 }
 
