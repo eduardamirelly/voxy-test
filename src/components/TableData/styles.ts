@@ -7,14 +7,9 @@ export const TableContainer = styled('div', {
   overflowX: 'scroll',
 });
 
-export const TableHead = styled('div', {
-  // borderBottom: `1px solid ${theme.colors.brownDark700}`,
-  // paddingBottom: '0.5rem',
-});
+export const TableHead = styled('div', {});
 
-export const TableBody = styled('div', {
-  // paddingTop: '0.5rem',
-});
+export const TableBody = styled('div', {});
 
 export const TableTr = styled('div', {
   display: 'grid',
@@ -22,6 +17,7 @@ export const TableTr = styled('div', {
   paddingInline: '1.5rem',
   paddingBlock: '0.75rem',
   width: 'max-content',
+  minWidth: '100%',
 
   variants: {
     hasBorderBottom: {
