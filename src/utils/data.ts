@@ -5,7 +5,7 @@ export const dataExample = [
     lastName: 'Lima',
     primaryGroup: 'Important people',
     phoneNumber: '781-633-2222',
-    hoursStudied: '3h',
+    hoursStudied: '3',
   },
   {
     email: 'arriete@gmail.com',
@@ -13,7 +13,7 @@ export const dataExample = [
     lastName: 'Neves',
     primaryGroup: 'Important people',
     phoneNumber: '781-633-2222',
-    hoursStudied: '5h',
+    hoursStudied: '5',
   },
   {
     email: 'sofia@gmail.com',
@@ -21,7 +21,7 @@ export const dataExample = [
     lastName: 'Maria',
     primaryGroup: 'Friends',
     phoneNumber: '781-633-2222',
-    hoursStudied: '10h',
+    hoursStudied: '10',
   },
   {
     email: 'mario@gmail.com',
@@ -29,7 +29,15 @@ export const dataExample = [
     lastName: 'Paulo',
     primaryGroup: 'Work',
     phoneNumber: '781-633-2222',
-    hoursStudied: '2h',
+    hoursStudied: '2',
+  },
+  {
+    email: 'leticia@gmail.com',
+    firstName: 'Leticia',
+    lastName: 'Veras',
+    primaryGroup: 'Work',
+    phoneNumber: '781-633-2222',
+    hoursStudied: '8',
   },
 ]
 

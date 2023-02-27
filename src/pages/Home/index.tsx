@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SearchBox } from "../../components/SearchBox";
 import { SelectBox } from "../../components/SelectBox";
 import { TableData } from "../../components/TableData";
@@ -8,18 +8,28 @@ import { columnsExample, dataExample, groups, orderByExample, sortByExample } fr
 
 export function Home() {
   const [dataList, setDataList] = useState(dataExample);
+  const [primaryGroup, setPrimaryGroup] = useState('');
+  const [orderBy, setOrderBy] = useState('1');
+  const [sortBy, setSortBy] = useState('email');
+
+  useEffect(() => {
+    handleSelectSortBy(sortBy);
+  }, [orderBy, primaryGroup]);
 
   const handleSelectPrimaryGroup = (event: string) => {
     setDataList(dataExample.filter((item) => item.primaryGroup == event));
+    setPrimaryGroup(event);
   }
   const handleSelectSortBy = (event: string) => {
     setDataList([...dataList].sort((a, b) => {
-      console.log((a[event as keyof object] as string).localeCompare(b[event as keyof object]));
-      return (a[event as keyof object] as string).localeCompare(b[event as keyof object])
+      return orderBy == '1' ? 
+              (a[event as keyof object] as string).localeCompare(b[event as keyof object], undefined,  {numeric: true, sensitivity: 'base'}) :
+              (b[event as keyof object] as string).localeCompare(a[event as keyof object], undefined,  {numeric: true, sensitivity: 'base'})
     }));
+    setSortBy(event);
   }
-  const handleSelectOrderBy = () => {
-    
+  const handleSelectOrderBy = (event: string) => {
+    setOrderBy(event);
   }
 
   return (
@@ -37,11 +47,13 @@ export function Home() {
             placeholder="Sort By" 
             options={sortByExample} 
             onValueChange={handleSelectSortBy} 
+            defaultValue={sortBy}
           />
           <SelectBox 
             placeholder="Order By" 
             options={orderByExample} 
-            onValueChange={handleSelectOrderBy} 
+            onValueChange={handleSelectOrderBy}
+            defaultValue={orderBy} 
           />
         </Box>
 

@@ -11,11 +11,12 @@ interface SelectBoxProps {
   options: OptionProp[];
   placeholder: string;
   onValueChange: (event: string) => void;
+  defaultValue?: string;
 }
 
-export function SelectBox({ options, placeholder, onValueChange }: SelectBoxProps) {
+export function SelectBox({ options, placeholder, onValueChange, defaultValue }: SelectBoxProps) {
   return (
-    <Select.Root onValueChange={onValueChange}>
+    <Select.Root onValueChange={onValueChange} defaultValue={defaultValue}>
       <SelectTrigger>
         <Select.Value placeholder={placeholder} />
         <Select.Icon>
