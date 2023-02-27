@@ -4,7 +4,7 @@ export const TableContainer = styled('div', {
   width: '100%',
   border: `1px solid ${theme.colors.brownDark700}`,
   borderRadius: '10px',
-  overflowX: 'scroll',
+  overflowX: 'auto',
 });
 
 export const TableHead = styled('div', {});

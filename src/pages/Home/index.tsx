@@ -1,16 +1,50 @@
 import { SearchBox } from "../../components/SearchBox";
+import { SelectBox } from "../../components/SelectBox";
 import { TableData } from "../../components/TableData";
-import { Column } from "../../templates/Column";
+import { Box } from "../../templates/Box";
 import { Container } from "../../templates/Container/styles";
 
 export function Home() {
   return (
     <Container>
-      <Column justify="center" align="center">
+      <Box direction="column" justify="center" align="center">
         <SearchBox />
 
+        <Box direction="row" wrap="wrap" justify="flexEnd" css={{ gap: '.75rem', marginBottom: '1rem', alignSelf: 'end' }}>
+          <SelectBox placeholder="Primary Group" options={[
+            {
+              text: 'All options',
+              value: '1'
+            },
+            {
+              text: 'Option 1',
+              value: '2'
+            }
+          ]} />
+          <SelectBox placeholder="Sort By" options={[
+            {
+              text: 'All options',
+              value: '1'
+            },
+            {
+              text: 'Option 1',
+              value: '2'
+            }
+          ]} />
+          <SelectBox placeholder="Order By" options={[
+            {
+              text: 'All options',
+              value: '1'
+            },
+            {
+              text: 'Option 1',
+              value: '2'
+            }
+          ]} />
+        </Box>
+
         <TableData />
-      </Column>
+      </Box>
     </Container>
   )
 }
