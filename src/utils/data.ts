@@ -4,8 +4,32 @@ export const dataExample = [
     firstName: 'Eduarda',
     lastName: 'Lima',
     primaryGroup: 'Important people',
-    phoneNumber: '84996310801',
+    phoneNumber: '781-633-2222',
     hoursStudied: '3h',
+  },
+  {
+    email: 'arriete@gmail.com',
+    firstName: 'Arriete',
+    lastName: 'Neves',
+    primaryGroup: 'Important people',
+    phoneNumber: '781-633-2222',
+    hoursStudied: '5h',
+  },
+  {
+    email: 'sofia@gmail.com',
+    firstName: 'Sofia',
+    lastName: 'Maria',
+    primaryGroup: 'Friends',
+    phoneNumber: '781-633-2222',
+    hoursStudied: '10h',
+  },
+  {
+    email: 'mario@gmail.com',
+    firstName: 'Mario',
+    lastName: 'Paulo',
+    primaryGroup: 'Work',
+    phoneNumber: '781-633-2222',
+    hoursStudied: '2h',
   },
 ]
 
