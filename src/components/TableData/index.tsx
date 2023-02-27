@@ -1,72 +1,33 @@
 import { TableBody, TableContainer, TableHead, TableTd, TableTh, TableTr } from "./styles";
 
-export function TableData() {
+interface TableDataProps {
+  headColumns: string[];
+  rowsData: object[];
+}
+
+export function TableData({ headColumns, rowsData }: TableDataProps) {
   return (
     <TableContainer>
       <TableHead>
         <TableTr>
-          <TableTh>
-            Column Title
-          </TableTh>
-          <TableTh>
-            Column Title
-          </TableTh>
-          <TableTh>
-            Column Title
-          </TableTh>
-          <TableTh>
-            Column Title
-          </TableTh>
-          <TableTh>
-            Column Title
-          </TableTh>
-          <TableTh>
-            Column Title
-          </TableTh>
+          {headColumns.map((col, index) => (
+            <TableTh key={index}>
+              {col}
+            </TableTh>
+          ))}
         </TableTr>
       </TableHead>
 
       <TableBody>
-        <TableTr>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-        </TableTr>
-        <TableTr hasBorderBottom="without">
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-          <TableTd>
-            Column texto
-          </TableTd>
-        </TableTr>
+        {rowsData.map((row, index) => (
+          <TableTr key={index}>
+            {Object.keys(row).map((key, index) => (
+              <TableTd key={index}>
+                {row[key as keyof object]}
+              </TableTd>
+            ))}
+          </TableTr>
+        ))}
       </TableBody>
     </TableContainer>
   )

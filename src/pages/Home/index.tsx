@@ -43,7 +43,50 @@ export function Home() {
           ]} />
         </Box>
 
-        <TableData />
+        <TableData 
+          headColumns={[
+            'Column 1',
+            'Column 2',
+            'Column 3',
+            'Column 4',
+            'Column 5',
+            'Column 6',
+          ]}
+          rowsData={[
+            {
+              email: 'example@email.com',
+              firstName: 'first name',
+              lastName: 'last name',
+              primaryGroup: 'important people',
+              phoneNumber: '84996310801',
+              hoursStudied: '100h',
+            },
+            {
+              email: 'example@email.com',
+              firstName: 'first name',
+              lastName: 'last name',
+              primaryGroup: 'important people',
+              phoneNumber: '84996310801',
+              hoursStudied: '100h',
+            },
+            {
+              email: 'example@email.com',
+              firstName: 'first name',
+              lastName: 'last name',
+              primaryGroup: 'important people',
+              phoneNumber: '84996310801',
+              hoursStudied: '100h',
+            },
+            {
+              email: 'example@email.com',
+              firstName: 'first name',
+              lastName: 'last name',
+              primaryGroup: 'important people',
+              phoneNumber: '84996310801',
+              hoursStudied: '100h',
+            },
+          ]}
+        />
       </Box>
     </Container>
   )

@@ -27,8 +27,8 @@ export function SelectBox({ options, placeholder }: SelectBoxProps) {
           <Select.Viewport>
 
             <Select.Group>
-              {options.map((option) => (
-                <SelectItem value={option.value}>
+              {options.map((option, index) => (
+                <SelectItem key={index} value={option.value}>
                   <Select.ItemText>{option.text}</Select.ItemText>
                   <Select.ItemIndicator>
                     <Check size={20} />
