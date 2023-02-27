@@ -15,7 +15,7 @@ export const SearchContainer = styled('div', {
   justifyContent: 'space-between',
   alignItems: 'center',
 
-  marginTop: '2rem',
+  marginBlock: '2rem',
 });
 
 export const SearchInput = styled('input', {

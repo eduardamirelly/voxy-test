@@ -19,3 +19,25 @@ a {
 input {
   outline: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F2F7F2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474448;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2D232E;
+}
