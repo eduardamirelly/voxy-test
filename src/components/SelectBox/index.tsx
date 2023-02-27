@@ -12,9 +12,10 @@ interface SelectBoxProps {
   placeholder: string;
   onValueChange: (event: string) => void;
   defaultValue?: string;
+  isRequired?: boolean;
 }
 
-export function SelectBox({ options, placeholder, onValueChange, defaultValue }: SelectBoxProps) {
+export function SelectBox({ options, placeholder, onValueChange, defaultValue, isRequired = false }: SelectBoxProps) {
   return (
     <Select.Root onValueChange={onValueChange} defaultValue={defaultValue}>
       <SelectTrigger>
@@ -29,6 +30,14 @@ export function SelectBox({ options, placeholder, onValueChange, defaultValue }:
           <Select.Viewport>
 
             <Select.Group>
+              {!isRequired && (
+                <SelectItem value="0">
+                  <Select.ItemText>All</Select.ItemText>
+                  <Select.ItemIndicator>
+                    <Check size={20} />
+                  </Select.ItemIndicator>
+                </SelectItem>
+              )}
               {options.map((option, index) => (
                 <SelectItem key={index} value={option.value}>
                   <Select.ItemText>{option.text}</Select.ItemText>
