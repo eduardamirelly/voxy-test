@@ -3,6 +3,7 @@ import { styled } from "../../styles/stitches.config";
 import * as Select from '@radix-ui/react-select';
 
 export const SelectTrigger = styled(Select.Trigger, {
+  minWidth: '150px',
   backgroundColor: '$brownDark600',
   border: 'transparent',
   borderRadius: '10px',
