@@ -1,5 +1,5 @@
 import * as Select from '@radix-ui/react-select';
-import { CaretDown } from 'phosphor-react';
+import { CaretDown, Check } from 'phosphor-react';
 import { SelectContent, SelectItem, SelectTrigger } from './styles';
 
 interface OptionProp {
@@ -30,6 +30,9 @@ export function SelectBox({ options, placeholder }: SelectBoxProps) {
               {options.map((option) => (
                 <SelectItem value={option.value}>
                   <Select.ItemText>{option.text}</Select.ItemText>
+                  <Select.ItemIndicator>
+                    <Check size={20} />
+                  </Select.ItemIndicator>
                 </SelectItem>
               ))}
             </Select.Group>

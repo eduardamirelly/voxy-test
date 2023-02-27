@@ -19,6 +19,16 @@ export const SelectTrigger = styled(Select.Trigger, {
   fontWeight: '500',
 
   outline: 'none',
+  width: '100%',
+  cursor: 'pointer',
+
+  '&:hover': {
+    backgroundColor: '$brownDark700',
+  },
+
+  '@xs': {
+    width: 'auto',
+  },
 });
 
 export const SelectContent = styled(Select.Content, {
@@ -37,7 +47,11 @@ export const SelectItem = styled(Select.Item, {
   borderRadius: '10px',
   outline: 'none',
 
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+
   '&:hover': {
     backgroundColor: '$brownDark800',
-  }
+  },
 });
