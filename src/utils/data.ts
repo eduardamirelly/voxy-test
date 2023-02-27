@@ -60,27 +60,27 @@ export const groups = [
 export const sortByExample = [
   {
     text: "Email",
-    value: "Email",
+    value: "email",
   },
   {
     text: "First Name",
-    value: "First Name",
+    value: "firstName",
   },
   {
     text: "Last Name",
-    value: "Last Name",
+    value: "lastName",
   },
   {
     text: "Primary Group",
-    value: "Primary Group",
+    value: "primaryGroup",
   },
   {
     text: "Phone Number",
-    value: "Phone Number",
+    value: "phoneNumber",
   },
   {
     text: "Hours Studied",
-    value: "Hours Studied",
+    value: "hoursStudied",
   },
 ]
 

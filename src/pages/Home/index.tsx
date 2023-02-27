@@ -12,8 +12,11 @@ export function Home() {
   const handleSelectPrimaryGroup = (event: string) => {
     setDataList(dataExample.filter((item) => item.primaryGroup == event));
   }
-  const handleSelectSortBy = () => {
-    
+  const handleSelectSortBy = (event: string) => {
+    setDataList([...dataList].sort((a, b) => {
+      console.log((a[event as keyof object] as string).localeCompare(b[event as keyof object]));
+      return (a[event as keyof object] as string).localeCompare(b[event as keyof object])
+    }));
   }
   const handleSelectOrderBy = () => {
     
