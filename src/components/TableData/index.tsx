@@ -20,7 +20,7 @@ export function TableData({ headColumns, rowsData }: TableDataProps) {
 
       <TableBody>
         {rowsData.map((row, index) => (
-          <TableTr key={index}>
+          <TableTr key={index} hasBorderBottom={index == rowsData.length - 1 ? 'without' : 'contain'}>
             {Object.keys(row).map((key, index) => (
               <TableTd key={index}>
                 {row[key as keyof object]}
